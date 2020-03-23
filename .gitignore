@@ -67,3 +67,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Do not include the strava cache (and especially the access token) in git.
+.strava

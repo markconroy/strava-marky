@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Marky's Strava Site`,
+    description: `A simple webapp to view my strava data.`,
+    author: `@markconroy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-strava`,
+      options: {}
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
