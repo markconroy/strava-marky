@@ -20,6 +20,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        extraDirsToCache: [".strava"],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
