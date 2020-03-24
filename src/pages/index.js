@@ -8,13 +8,14 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Marky's Strava Page</h1>
-    <p>Now go build something great.</p>
+    <h1>Welcome to Marky's Strava</h1>
+    <p><a href="https://www.strava.com/athletes/3331514">Connect with me on Strava.</a></p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
     <Link to="/">Home</Link> | 
     <Link to="/activities/">Activities</Link> | 
+    <Link to="/clubs/">Clubs</Link>
   </Layout>
 )
 

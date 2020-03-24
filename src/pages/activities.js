@@ -20,6 +20,7 @@ const ActivitiesPage = ({ data }) => (
     </ol>
     <Link to="/">Home</Link> | 
     <Link to="/activities/">Activities</Link> | 
+    <Link to="/clubs/">Clubs</Link>
   </Layout>
 )
 
