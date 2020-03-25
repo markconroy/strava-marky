@@ -21,7 +21,12 @@ module.exports = {
         extraDirsToCache: [".strava"],
       },
     },
-    `gatsby-source-strava`,
+    {
+      resolve: "gatsby-source-strava",
+      options: {
+          debug: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
