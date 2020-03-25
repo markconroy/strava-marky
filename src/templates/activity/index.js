@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-export default ({
+const ActivityTemplate = ({
   data: {
     stravaActivity: { activity },
   },
@@ -25,6 +25,9 @@ export default ({
     <Link to="/activities/">Activities</Link> | 
   </Layout>
 )
+
+export default ActivityTemplate
+
 export const ActivityPageQuery = graphql`
   query($id: Float) {
     stravaActivity(activity: { id: { eq: $id } }) {
