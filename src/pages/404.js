@@ -11,7 +11,8 @@ const NotFoundPage = () => (
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     <Link to="/">Home</Link> | 
     <Link to="/activities/">Activities</Link> | 
-    <Link to="/clubs/">Clubs</Link>
+    <Link to="/clubs/">Clubs</Link> | 
+    <a href="https://www.strava.com/athletes/3331514"> Connect with me on Strava.</a>
   </Layout>
 )
 

@@ -13,14 +13,19 @@ const ActivitiesPage = ({ data }) => (
         <Fragment>
           <li>
             <h2><Link to={`/activities/${edge.node.activity.id}`}>{edge.node.activity.name}</Link></h2>
-            <p>Completed {edge.node.activity.start_date} with a moving time of {edge.node.activity.moving_time} seconds, covering a distance of {edge.node.activity.distance} metres.</p>
+            <ul>
+              <li>Completed: {edge.node.activity.when_date} at {edge.node.activity.when_time}</li>
+              <li>Moving time: {edge.node.activity.moving_time} seconds</li>
+              <li>Distance of {edge.node.activity.distance} metres</li>
+            </ul>
           </li>
         </Fragment>
       ))}
     </ol>
     <Link to="/">Home</Link> | 
     <Link to="/activities/">Activities</Link> | 
-    <Link to="/clubs/">Clubs</Link>
+    <Link to="/clubs/">Clubs</Link> | 
+    <a href="https://www.strava.com/athletes/3331514"> Connect with me on Strava.</a>
   </Layout>
 )
 
@@ -34,7 +39,8 @@ export const ActivitiesPageQuery = graphql`
           activity {
             name
             id
-            start_date(fromNow: true)
+            when_date: start_date(formatString: "MMMM DD, YYYY")
+            when_time: start_date(formatString: "H:m")
             type
             moving_time
             distance
